@@ -8,6 +8,7 @@
   --main-text-color: #434455;
   --secondary-text-color: #2e2f42;
   --text-color-dark-theme: #f4f4fd;
+  --white-color: #fff;
   --main-color: #4d5ae5;
   --accent-color: #404bbf;
   --animation-duration-time-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -84,7 +85,7 @@ button {
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
-  color: #fff;
+  color: var(--white-color);
   width: 320px;
   margin-left: auto;
   margin-right: auto;
@@ -187,7 +188,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--white-color);
     display: none;
     opacity: 0;
     pointer-events: none;
@@ -234,7 +235,7 @@ button {
   }
   .modal-close-btn:hover .close-icon,
   .modal-close-btn:hover .close-icon {
-    fill: #fff;
+    fill: var(--white-color);
   }
   .mobile-menu-nav-list {
     display: flex;
@@ -371,7 +372,7 @@ button {
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
   letter-spacing: 0.04em;
-  color: #fff;
+  color: var(--white-color);
   background-color: var(--main-color);
   display: block;
   margin-left: auto;
@@ -424,7 +425,7 @@ button {
   justify-content: space-between;
 }
 .team-list-item {
-  background-color: #fff;
+  background-color: var(--white-color);
   border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -512,18 +513,84 @@ button {
 .footer-descr {
   color: var(--text-color-dark-theme);
 }
+.footer-social-box {
+  margin-right: auto;
+}
 .footer-social-box > p {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: var(--white-color);
   margin-bottom: 16px;
   transition: background-color var(--animation-duration-time-func);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: #31d0aa;
+}
+.footer-form-box > p {
+  font-weight: 500;
+  color: var(--white-color);
+  margin-bottom: 16px;
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+}
+
+.footer-form-label {
+  margin-right: 24px;
+}
+.footer-form-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid var(--white-color);
+  background-color: transparent;
+  border-radius: 4px;
+
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+.footer-form-input::placeholder {
+  color: var(--white-color);
+}
+.footer-form-input:focus {
+  border-color: #31d0aa;
+  outline: transparent;
+}
+.footer-form-input:focus + .footer-form-label,
+.footer-form-input:not(:placeholder-shown) + .footer-form-label {
+  transform: translateY(-42px) translateX(-16px);
+}
+
+.footer-form-btn {
+  position: relative;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  padding: 8px 24px;
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: #31d0aa;
+}
+.footer-form-btn-icon {
+  margin-left: 16px;
+  fill: var(--white-color);
 }
 /* _____PORTFOLIO_____ */
 .portfolio-section {
@@ -556,7 +623,7 @@ button {
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
-  color: #fff;
+  color: var(--white-color);
   background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.08),
@@ -680,7 +747,7 @@ button {
 }
 .modal-close-btn:hover .close-icon,
 .modal-close-btn:hover .close-icon {
-  fill: #fff;
+  fill: var(--white-color);
 }
 
 .modal-subtitle {
@@ -811,7 +878,7 @@ button {
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
   letter-spacing: 0.04em;
-  color: #fff;
+  color: var(--white-color);
   background-color: var(--main-color);
   display: block;
   min-width: 169px;
