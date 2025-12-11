@@ -757,7 +757,7 @@ button {
   .footer-content-wrapper {
     align-items: flex-start;
   }
-  @media (min-width: 768px) and (max-width: 1157px) {
+  @media screen and (min-width: 768px) and (max-width: 1157px) {
     .footer-content-wrapper {
       width: 552px;
       margin-left: auto;
@@ -893,8 +893,8 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
-
+  width: 100%;
+  max-width: 408px;
   padding: 72px 24px 24px 24px;
   border-radius: 4px;
   background-color: #fcfcfc;
@@ -1080,4 +1080,11 @@ button {
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: #404bbf;
+}
+@media screen and (max-width: 767px) {
+  .modal {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 392px;
+  }
 }
