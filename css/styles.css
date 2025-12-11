@@ -68,6 +68,7 @@ button {
 @media screen and (min-width: 1158px) {
   .container {
     width: 1158px;
+    padding: 0 15px;
   }
 }
 .section {
@@ -530,7 +531,8 @@ button {
 }
 .team-list {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
 }
 .team-list-item {
   background-color: var(--white-color);
@@ -571,6 +573,19 @@ button {
 .social-icon {
   fill: var(--text-color-dark-theme);
 }
+@media screen and (max-width: 767px) {
+  .team-list {
+    flex-direction: column;
+    gap: 72px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-wrap: wrap;
+    gap: 64px 24px;
+  }
+}
+
 /* _____CUSTOMERS_____ */
 .customers-list {
   display: flex;
