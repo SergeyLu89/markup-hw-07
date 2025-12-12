@@ -908,12 +908,6 @@ button {
   }
 }
 
-/* .portfolio-list-item:hover,
-.portfolio-list-item:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-} */
-
 /* _____MODAL_____ */
 .backdrop {
   position: fixed;
@@ -932,21 +926,24 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   width: 95%;
   height: 95%;
-  overflow: auto;
   max-width: 408px;
   padding: 72px 24px 24px 24px;
   border-radius: 4px;
   background-color: #fcfcfc;
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 1px 1px 0 rgba(0, 0, 0, 0.14);
+  transition: transform var(--animation-duration-time-func);
 }
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
 }
 
 .modal-close-btn {
@@ -1128,5 +1125,6 @@ button {
     padding-left: 16px;
     padding-right: 16px;
     max-width: 392px;
+    overflow: auto;
   }
 }
